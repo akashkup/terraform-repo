@@ -6,3 +6,9 @@ resource "aws_instance" "web" {
     Name = "HelloWorld"
   }
 }
+
+output "ec2_ip" {
+  value = aws_instance.web
+}
+
+#to output  values to file_command==>terraform output >> file.txt(path)      or
